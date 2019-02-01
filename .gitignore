@@ -1,0 +1,56 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+/.tmp
+/.sass-cache
+/.sass-cache/*
+*.css.map
+*.sass.map
+*.scss.map
+dist/
+assets/css/
+/.DS_Store
+*.DS_Store
+assets/css/custom.css
+package-lock.json
+
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
