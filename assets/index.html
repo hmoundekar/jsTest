@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    
+    <link rel="icon" href="images/cropped-Unfyd-32x32.png" sizes="32x32" />
+    <link rel="icon" href="images/cropped-Unfyd-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/cropped-Unfyd-180x180.png" />
+    <!--build:css css/vender.home.min.css-->
+    <link rel='stylesheet' href='vendor/css/owl.carousel.css'>
+    <link rel="stylesheet" type="text/css" href="vendor/css/owl.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/animate.css">
+    <!--endbuild-->
+    <!--build:css css/custom.min.css-->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <!--endbuild-->
+    <style>
+        
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header id="navbar-template" class=""></header>
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="mt-5">Remove Duplicate Items from array</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="lead">All List Items</p>
+                            <div id="allItems"></div>
+                        </div>
+                        <div class="col-6">
+                            <p class="lead">Filtered List Items</p>
+                            <div id="items"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mt-5">
+                    <p class="lead">HTML</p>
+                    <pre><code>
+                        &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-12&quot;&gt;
+                        &lt;p class=&quot;mt-5&quot;&gt;Remove Duplicate Items from array&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-4&quot;&gt;
+                        &lt;p class=&quot;lead&quot;&gt;All List Items&lt;/p&gt;
+                        &lt;div id=&quot;allItems&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-4&quot;&gt;
+                        &lt;p class=&quot;lead&quot;&gt;Filtered List Items&lt;/p&gt;
+                        &lt;div id=&quot;items&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
+                    </code></pre>
+                    
+                    <p class="lead">JS</p>
+                    <pre>
+                        <code>
+                            const names = ['John', 'Paul', 'George', 'Ringo', 'John', 'Chandan',"Pawan","Pavan",'George', 'Ringo', 'John', 'Chandan',"Pawan","Pavan","Shubham","Harshal"];
+                            var listing=document.getElementById('allItems')
+                            var dupElem=document.getElementById('items')
+                            function removeDups(names) {
+                                let unique = {};
+                                var listItem;
+                                var node;
+                                names.forEach(function(i) {
+                                    listItem=document.createElement("li");
+                                    // listItem=document.createElement("span");
+                                    node = document.createTextNode(i+", ");
+                                    listItem.appendChild(node);
+                                    listing.appendChild(listItem);
+                                    if(!unique[i]) {
+                                        unique[i] = true;
+                                        listItem=document.createElement("li");
+                                        //   listItem=document.createElement("span");
+                                        node = document.createTextNode(i+", ");
+                                        listItem.appendChild(node);
+                                        dupElem.appendChild(listItem);
+                                    }
+                                });
+                                
+                                return Object.keys(unique);
+                            }
+                            
+                            removeDups(names);
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
+            CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt;
+                .container</code>.</p> -->
+            </main>
+            <footer class="footer mt-auto py-3">
+            </footer>
+            <!-- <script src="resources/js/jquery.min.js"></script> -->
+            <!--build:js js/vendor.home.min.js-->
+            <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+            <script type="text/javascript" src="vendor/js/popper.min.js"></script>
+            <!-- owl JS -->
+            <!-- <script src='vendor/js/owl.carousel.min.js'></script>-->
+            <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
+            <!-- Responsive tab JS -->
+            <!-- <script src="vendor/js/swiper.min.js"></script> -->
+            <!--endbuild-->
+            <!--build:js js/home.min.js-->
+            <script src="js/common.js"></script>
+            <script src="/js/custom.js"></script>
+            <!--endbuild-->
+            
+        </body>
+        
+        </html>
